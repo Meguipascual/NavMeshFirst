@@ -10,6 +10,7 @@ public class DetectionZoneScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("collides");
+        Debug.Log("ccaacacaa");
 
         if (other.CompareTag("Agent"))
         {

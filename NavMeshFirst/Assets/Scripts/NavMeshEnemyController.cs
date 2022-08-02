@@ -5,16 +5,12 @@ using UnityEngine.AI;
 
 public class NavMeshEnemyController : MonoBehaviour
 {
-    public NavMeshAgent enemy;
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        enemy = GetComponent<NavMeshAgent>();
-    }
+        Debug.Log("ccaacacaa");
+        if (other.gameObject.activeSelf)
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
     }
 }
