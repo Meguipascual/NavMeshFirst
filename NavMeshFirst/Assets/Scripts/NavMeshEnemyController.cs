@@ -7,10 +7,6 @@ public class NavMeshEnemyController : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ccaacacaa");
-        if (other.gameObject.activeSelf)
-        {
-
-        }
+        Debug.Log("you are dead");
     }
 }

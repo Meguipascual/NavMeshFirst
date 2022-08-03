@@ -5,16 +5,24 @@ using UnityEngine.AI;
 
 public class DetectionZoneScript : MonoBehaviour
 {
-    public NavMeshAgent enemy;
+    public NavMeshAgent[] enemy;
 
+    private void Start()
+    {
+        enemy = FindObjectsOfType<NavMeshAgent>();
+        
+    }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("collides");
-        Debug.Log("ccaacacaa");
-
         if (other.CompareTag("Agent"))
         {
-            enemy.destination = transform.position;
+            for(int i = 0; i < enemy.Length; i++)
+            {
+                if (!enemy[i].CompareTag("Agent"))
+                {
+                    enemy[i].destination = transform.position;
+                }
+            }
         }
     }
 }
